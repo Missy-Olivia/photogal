@@ -30,3 +30,11 @@ def search_by_category(request):
     else:
         message = 'You havent searched yet'
         return render(request, 'search.html',{"message": message})
+        
+def location_filter(request, image_location):
+    locations = Location.objects.all()
+    location = Location.get_location_id(image_location)
+    images = Image.filter_by_location(image_location)
+    title = f'{location} Photos'
+    return render(request, 'location.html', {'title':title, 'images':images, 'locations':locations, 'location':location})
+
