@@ -71,8 +71,8 @@ class Image(models.Model):
         self.delete()
     
     @classmethod
-    def update_image(cls, id ,name, description , image_location, image_category):
-        update = cls.objects.filter(id = id).update(name = name, description = description ,image_location = image_location,image_category = image_category)
+    def update_image(cls, id ,image_name, image_description , image_location, image_category):
+        update = cls.objects.filter(id = id).update(image_name = name, image_description = description ,image_location = image_location,image_category = image_category)
 
     @classmethod
     def get_image_by_id(id):

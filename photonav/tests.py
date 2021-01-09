@@ -69,7 +69,7 @@ class ImageTestClass(TestCase):
         self.locate = Location(name="Africa")
         self.locate.save_location()
 
-        self.image = Image(name="image one", description='my image',image_location=self.locate, image_category=self.categ)
+        self.image = Image(image_name="image one", image_description='my image',image_location=self.locate, image_category=self.categ)
         self.image.save_image()
 
     #Testing Instances
@@ -84,7 +84,7 @@ class ImageTestClass(TestCase):
 
     def test_save_method(self):
         self.image.save_image()
-        images  = Image.objects.all()
+        images = Image.objects.all()
         self.assertTrue(len(images)>0)
 
 
@@ -110,4 +110,4 @@ class ImageTestClass(TestCase):
         image = Image.update_image( self.image.id, 'Image update', 'my Image',self.locate, self.categ)
         upimage = Image.objects.filter(id = self.image.id)
         print(upimage)
-        self.assertTrue(Image.name == 'Image update')
+        self.assertTrue(Image.image_name == 'Image update')
