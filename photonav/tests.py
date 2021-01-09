@@ -58,3 +58,56 @@ class CategoryTestClass(TestCase):
         category.update_category('Photography')
         category = Category.get_category_id(self.categ.id)
         self.assertTrue(category.name == 'Photography')
+
+class ImageTestClass(TestCase):
+    #setup method
+    def setUp(self):
+
+        self.categ = Category(name="Art")
+        self.categ.save_category()
+
+        self.locate = Location(name="Africa")
+        self.locate.save_location()
+
+        self.image = Image(name="image one", description='my image',image_location=self.locate, image_category=self.categ)
+        self.image.save_image()
+
+    #Testing Instances
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image, Image))
+
+    def tearDown(self):
+        self.image.delete_image()
+        self.categ.delete_category()
+        self.locate.delete_location()
+
+
+    def test_save_method(self):
+        self.image.save_image()
+        images  = Image.objects.all()
+        self.assertTrue(len(images)>0)
+
+
+    def test_get_all_images(self):
+        images = Image.get_all_images()
+        self.assertTrue(len(images)>0)
+
+    def test_get_image_by_id(self):
+        images= Image.get_image_by_id(self.image.id)
+        self.assertTrue(len(images) == 1)
+
+    def test_search_by_category(self):
+        images = Image.search_by_category('art')
+        self.assertTrue(len(images)>0)
+
+    def test_filter_by_location(self):
+        images = Image.filter_by_location('1')
+        print(images)
+        self.assertTrue(len(images)>0)
+
+    def test_update_image(self):
+        self.image.save_image()
+        image = Image.update_image( self.image.id, 'Image update', 'my Image',self.locate, self.categ)
+        upimage = Image.objects.filter(id = self.image.id)
+        print(upimage)
+        self.assertTrue(Image.name == 'Image update')
