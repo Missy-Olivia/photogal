@@ -13,8 +13,7 @@
             <form class="form" role="search" action="{% url 'search_by_category' %}" >
                   <input type="text" class="form-control" style='z-index:1;' placeholder="Search by category" name="image_category">
               </form>
-              <!-- <small><b>Trending searches: Back, travel</b></small><br><br><br> -->
-            <a class='btn' href="#gallery">VIEW GALLERY</a>
+              <small><b>Top searches: Art, Landscape</b></small>
         </div>
     </div></div>
 </div><br><br>
@@ -73,7 +72,6 @@
         </div>
     {% endfor %}
 </div>
-
 <script>
     function copyURL(value){
       function handler(event){
