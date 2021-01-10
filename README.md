@@ -67,4 +67,5 @@ Missy Olivia
 -github: Missy Olivia
 
 ## License
-- MIT LICENSE (c)2021  Missy Olivia 
+Copyright (c) 2021 Missy-Olivia
+
