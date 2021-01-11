@@ -12,6 +12,17 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li><a href="{% url 'gallery' %}" style='color:black;font-size: larger;'>Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Art</a>
+                <a class="dropdown-item" href="#">Black and White </a>
+                <div class="dropdown-divider">Landscape</div>
+                <a class="dropdown-item" href="#">Photography</a>
+              </div>
+            </li>
         </ul>
         </div>
   </nav>
