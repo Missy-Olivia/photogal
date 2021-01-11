@@ -2,7 +2,7 @@
 
 # PhotoGallery
 
-#  PROJECT DESCRIPTION
+###  PROJECT DESCRIPTION
 
 This is  personal gallery application that you display your photos for others to see.
 ## User Stories
@@ -20,7 +20,7 @@ As a user of the application I should be able to:
 
 ## Author
 Missy Olivia
-## Prerequisites
+### Prerequisites
 -You need to have nano text editor installed. you can find out whether you have it installed by typing nano --version in your terminal. For most linux distributions, it is installed by default. However, if you don't have it installed, you can quicky do that by typing sudo apt-get install nano in your terminal.
 
 -You need to have (python3.6) installed in your machine
@@ -37,21 +37,11 @@ Missy Olivia
 
 # Setup/Installation Requirements
 
--Internet connection
-
--webpage URL:
-
--To get to this webpage fist you need to get to my github repository
-
 -The link to my github Repository is: https://github.com/Missy-Olivia/photogal
-
--from there you can access the project
 
 -git clone project.
 
 -install dependancies in requirements.txt file pip install -r requirements.txt
-
--cd into project
 
 -create a virtual environment ($ python3.6 -m venv virtual)
 
@@ -73,7 +63,9 @@ Missy Olivia
 
 # Contact
 -Email Address: ngamissia@gmail.com
+
 -github: Missy Olivia
 
 ## License
-- MIT LICENSE (c)2021  Missy Olivia 
+Copyright (c) 2021 Missy-Olivia
+
