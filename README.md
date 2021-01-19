@@ -21,7 +21,6 @@ As a user of the application I should be able to:
 ## Author
 Missy Olivia
 ### Prerequisites
--You need to have nano text editor installed. you can find out whether you have it installed by typing nano --version in your terminal. For most linux distributions, it is installed by default. However, if you don't have it installed, you can quicky do that by typing sudo apt-get install nano in your terminal.
 
 -You need to have (python3.6) installed in your machine
 
@@ -55,7 +54,7 @@ Missy Olivia
 
 -HTML5
 -CSS
--Bootstarap
+-Bootstrap
 -Python3.6
 -Django 3.1.5
 -Psycopg2
